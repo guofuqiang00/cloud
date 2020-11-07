@@ -1,0 +1,37 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: cloud-business
+  profiles:
+    active: mybatis
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    #false 表示不向注册中心注册自己
+    register-with-eureka: true
+    #false 表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
+    fetch-registry: true
+    service-url:
+      #设置与Eureka Service交互的地址查询服务和注册服务都需要依赖这个地址
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      #defaultZone: http://localhost:7001/eureka/ #单机版
+      #defaultZone: http://192.168.31.122:7001//eureka/ #单机版
+      #defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka #集群版
+      # defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka #集群版
+
+#设置Fegin客户端超时时间（openFegin 默认支持Ribbon）
+ribbon:
+  ReadTimeout: 4000 #指的是建立连接所用的时间，使用有网络状态正常的情况下，两端连接所用的时间
+  ConnectTimeout: 4000 #指的是建立连接后服务器读取到可用资源所用的时间
+
+logging:
+  level:
+    # fegin日志以什么级别监控那个接口
+    com.consumer.service.UserService: debug
+
+#feign:
+#  hystrix:
+#    enabled: true
