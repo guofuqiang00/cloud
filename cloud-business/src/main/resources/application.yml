@@ -18,7 +18,7 @@ eureka:
       #设置与Eureka Service交互的地址查询服务和注册服务都需要依赖这个地址
       #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
       #defaultZone: http://localhost:7001/eureka/ #单机版
-      #defaultZone: http://192.168.31.122:7001//eureka/ #单机版
+      defaultZone: http://182.254.159.117:8001/eureka/ #单机版
       #defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka #集群版
       # defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka #集群版
 
