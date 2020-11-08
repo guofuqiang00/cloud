@@ -24,6 +24,7 @@
     </dependencies>
 
     <build>
+        <finalName>cloud-business</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
