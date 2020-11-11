@@ -1,0 +1,8 @@
+#配置文件
+server:
+  port: 8585
+spring:
+  application:
+    name: sports
+  profiles:
+    active: mybatis
