@@ -42,7 +42,7 @@
         </commentGenerator>
         <!--数据库连接 -->
         <jdbcConnection driverClass="${jdbc.driverClass}"
-                        connectionURL="${jdbc.url}" userId="${jdbc.userId}"
+                        connectionURL="jdbc:mysql://182.254.159.117:3306/cloud" userId="${jdbc.userId}"
                         password="${jdbc.password   }">
         </jdbcConnection>
         <!--默认false Java type resolver will always use java.math.BigDecimal if
